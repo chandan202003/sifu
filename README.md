@@ -1,6 +1,122 @@
-# Sifu - Enhanced Knowledge System for ELLMa
+# Sifu - Advanced Knowledge and NLP Support System
 
-Sifu is an advanced knowledge management and context-aware response system designed to enhance ELLMa's capabilities. It provides real-time learning, multi-language support, and integration with external knowledge sources.
+[![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: Apache 2.0 ](https://img.shields.io/badge/License-Apache 2.0 -yellow.svg)](https://opensource.org/licenses/Apache 2.0 )
+[![Documentation Status](https://readthedocs.org/projects/sifu-ai/badge/?version=latest)](https://sifu-ai.readthedocs.io/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+Sifu is an advanced knowledge and natural language processing system designed to enhance AI assistants with sophisticated context handling, real-time learning, and multi-language support.
+
+## 🌟 Features
+
+- **Advanced NLP**: Intent recognition and entity extraction
+- **Knowledge Management**: Store and retrieve information with confidence scoring
+- **Context Awareness**: Maintain conversation context and history
+- **Multi-language Support**: Automatic language detection and translation
+- **Learning Engine**: Improve responses through feedback
+- **RESTful API**: Easy integration with existing systems
+- **Modular Architecture**: Extensible design for custom components
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Python 3.8+
+- [Poetry](https://python-poetry.org/) for dependency management
+- (Optional) GPU for better ML performance
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/sifu.git
+   cd sifu
+   ```
+
+2. Install dependencies using Poetry:
+   ```bash
+   poetry install
+   ```
+
+   Or install with pip:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Install language models (for NLP features):
+   ```bash
+   python -m spacy download en_core_web_sm
+   ```
+
+### Basic Usage
+
+```python
+from sifu import Sifu
+import asyncio
+
+async def main():
+    # Initialize Sifu
+    sifu = Sifu()
+    
+    # Process a query
+    response = await sifu.process_query("Hello, what can you do?")
+    print(f"Response: {response['text']}")
+    
+    # Add knowledge
+    await sifu.knowledge_base.add_entry(
+        content="Sifu is an AI assistant",
+        tags=["introduction"],
+        language="en"
+    )
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+## 📚 Documentation
+
+For detailed documentation, please visit our [documentation site](https://sifu-ai.readthedocs.io/).
+
+### Key Components
+
+- [Knowledge Base](docs/knowledge.md): Store and retrieve information
+- [Context Management](docs/context.md): Handle conversation state
+- [Intent Matcher](docs/matcher.md): Understand user intents
+- [Learning Engine](docs/learning.md): Improve through feedback
+- [API Reference](docs/api.md): REST API documentation
+
+## 🧪 Testing
+
+Run the test suite:
+
+```bash
+# Install test dependencies
+poetry install --with test
+
+# Run tests
+pytest tests/ -v
+
+# Run with coverage
+pytest --cov=sifu --cov-report=term-missing
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details.
+
+## 📄 License
+
+This project is licensed under the Apache 2.0  License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+For questions or support, please open an issue or contact [your-email@example.com](mailto:your-email@example.com).
+
+---
+
+<p align="center">
+  Made with ❤️ by Your Name
+</p> for ELLMa
 
 ## Core Components
 
@@ -161,7 +277,7 @@ LOG_LEVEL=INFO
 
 ## License
 
-This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache 2.0  License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
